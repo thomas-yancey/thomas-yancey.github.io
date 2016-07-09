@@ -7,7 +7,7 @@ gems: [jekyll-paginate]
 # Setup
 title:               Thomas Yancey
 tagline:             'top notch blog'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:         'A blog'
 url:                 http://lanyon.getpoole.com
 baseurl:             ''
 paginate:            5
