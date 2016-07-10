@@ -576,8 +576,9 @@ Now render all of the messages in the room and add the form just below it. Put t
 
 {% highlight ruby %}
 #app/views/rooms/show.html.erb
-<%= render partial: "/messages/form", locals: {room: @room, message: @message} %>
 <%= render @messages %>
+
+<%= render partial: "/messages/form", locals: {room: @room, message: @message} %>
 
 {% endhighlight %}
 

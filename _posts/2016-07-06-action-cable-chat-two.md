@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 
 
-Last Post we went through and built out the chat app without any of the realtime features. If you want to work along you can fork the repo from here [action-cable-chat-example]({{https://github.com/thomas-yancey/action-cable-chat-template}}).
+Last Post we went through and built out the chat app without any of the realtime features. If you want to work along you can fork the repo from here [action-cable-chat-example]({{"https://github.com/thomas-yancey/action-cable-chat-template"}}).
 
 <!--more-->
 
@@ -35,7 +35,7 @@ And for the enviroment configuration make sure that the localhost:3000/cable is 
 config.action_cable.url = "ws://localhost:3000/cable"
 {% endhighlight %}
 
-Finally since we only want logged in users to be the ones who have access to any of the pub/sub data we need to verify them when the connection is made. Let's go ahead and modify our channels connection file. The following snippet is taken from the [rails edge guide]({{http://edgeguides.rubyonrails.org/action_cable_overview.html}}).
+Finally since we only want logged in users to be the ones who have access to any of the pub/sub data we need to verify them when the connection is made. Let's go ahead and modify our channels connection file. The following snippet is taken from the [rails edge guide]({{"http://edgeguides.rubyonrails.org/action_cable_overview.html"}}).
 
 {% highlight ruby %}
 #app/channels/application_cable/connection.rb
@@ -125,7 +125,7 @@ as you can see we are going to append the data we receive back through this chan
 </div>
 {% endhighlight %}
 
-Now let's make our server side connection. When a user calls the subscription.create method on the front-end, it will call the subscribed method on the specified channel on the backend. Let's wire that up.
+Now let's make our server side connection. When a user calls the subscription.create method on the front-end, it will call the subscribed method for the specified channel on the backend. Let's wire that up.
 
 {% highlight ruby %}
 # app/channels/room_channel.rb
@@ -198,7 +198,7 @@ $('#new_message').on ('submit', function(){
 });
 {% endhighlight %}
 
-If everything is working we should have chats being posted in realtime! WHAT! crazy. Test it out, open two browsers, one incognito and login as two different users. You should see it appear on both screens after a submit.
+Restart your server and if everything is working we should have chats being posted in realtime! WHAT! crazy. Test it out, open two browsers, one incognito and login as two different users. You should see it appear on both screens after a submit.
 
 Alright now that we have that working lets get those users displaying in realtime. Now this one is a bit more tricky. Since users can only get data published to them when they are subscribed it's not as simple to show the users that were logged in before you entered the room. Let's add an online field to our memberships table as a way to manage peoples status. create a new migration to add the field online as a boolean to memberships
 
@@ -212,15 +212,27 @@ class AddOnlineToMembership < ActiveRecord::Migration[5.0]
 end
 {% endhighlight %}
 
-You should probably drop and remigrate your database at this point.
-
-now create the appearance channel, we are going to scope it out the same way with the room index. Everytime someone subscribes to the room we are going to set the status to true and publish that membership data to the room. Same for when they unsubscribe and we set the status to false. We will first create the appearance channel
+Drop, create, migrate and seed your database again. You may have to also delete your browser history to get rid of the session[:user_id] on your browser. now create the appearance channel, we are going to scope it out the same way with the room index. Everytime someone subscribes to the room we are going to set the status to true and publish that membership data to the room. Same for when they unsubscribe and we set the status to false. We will first create the appearance channel
 
 {% highlight powershell %}
   rails g channel appearance
 {% endhighlight %}
 
 Let's work out the server side code which is going to call two methods that we need to define in the membership model -- is_online and is_offline
+
+{% highlight ruby %}
+# app/models/membership.rb add these two methods
+
+  def is_online
+    self.update_attributes(online: true)
+  end
+
+  def is_offline
+    self.update_attributes(online: false)
+  end
+{% endhighlight %}
+
+And then the server side channel code.
 
 {% highlight ruby %}
 #app/channels/appearance_channel.rb
@@ -238,18 +250,6 @@ class AppearanceChannel < ApplicationCable::Channel
     member.is_offline
   end
 end
-{% endhighlight %}
-
-{% highlight ruby %}
-# app/models/membership.rb add these two methods
-
-  def is_online
-    self.update_attributes(online: true)
-  end
-
-  def is_offline
-    self.update_attributes(online: false)
-  end
 {% endhighlight %}
 
 Let's make a job similar to how we did for messages after a commit for the membership model. We are going to want to publish data whenever a membership status changes from true to false or vice versa.
@@ -356,24 +356,29 @@ Set the css to have the green dot display for the class active and not display f
 }
 {% endhighlight %}
 
-Now when the pageload initially occurs we see all of the current statuses of users online. That paired with the appearance channel we will see the green dot vanish when users leave the room and appear when they enter.
+Now when the pageload initially occurs we see all of the current statuses of users online. That paired with the appearance channel we will see the green dot vanish when users leave the room and appear when they enter. Test it out, login with one user in incognito and another user in a seperate browser. when one of them exits the dot disappears, when they enter again it comes back.
 
 We have a full fledged chat app at this point, users can talk in realtime and you can view all of the users currently in the room. All that is left to do is style the app. Let's deploy this guy to heroku. Create your new app on heroku and grab the app name.
 
-Now most of this section is taken line for line from [this post]({{https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable}}) by Sophie DeBenedetto. It is a great tutorial and much more informative than this one!
+Now most of this section is taken line for line from [this post]({{"https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable"}}) by Sophie DeBenedetto. It is a great tutorial and much more informative than this one!
 
 {% highlight powershell %}
 heroku create your-app-name
 {% endhighlight %}
 
-add redistogo to your app and grab the redistogo url.
+add redistogo to your app
 
 {% highlight powershell %}
 heroku addons:add redistogo
-heroku config --app your-app-name | grep REDISTOGO_URL
 {% endhighlight %}
 
-add the redistogo url to your config cable.yml
+now run the following command to grab to view your config variables
+
+{% highlight powershell %}
+heroku config --app your-app-name
+{% endhighlight %}
+
+copy and paste the redistogo url from your config variables to your config cable.yml
 
 {% highlight ruby %}
 # config/cable.yml
@@ -415,12 +420,13 @@ specify cable on the client side when you call create consumer
 Now all that's left to do is deploy and pray
 
 {% highlight powershell %}
+rake assets:precompile
 git push heroku master
 heroku run rake db:migrate
 heroku run rake db:seed
 {% endhighlight %}
 
-Hope that worked out for you!
+Hope that worked out for you! Obviously this app could use some styling but I am going to leave that up to you. If you are looking to keep working your action cable skills I would recommend trying to build out a channel for user to user channel within the room. Also check out this cool post on building [chess with action cable]({{"http://jargon.io/joeyschoblaska/rails-5-chess-with-action-cable-websockets"}}).
 
 ## Go through all of your before action for validations
 
