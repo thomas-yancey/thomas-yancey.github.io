@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Action Cable Chat -- part 2"
+title:  "Action Cable Chat Part 2"
 date:   2016-07-06 21:30:06 -0400
 categories: jekyll update
 ---

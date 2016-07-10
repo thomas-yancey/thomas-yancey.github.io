@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Action Cable Chat -- part 1"
+title:  "Action Cable Chat Part 1"
 date:   2016-07-05 21:30:06 -0400
 categories: jekyll update
 ---
 
-Rails 5 just came out this past week and I thought what better for a first blog post. I am going to walk through building a simple chat app with action cable. By the end of it we will have an app that allows users to sign up, create private chatrooms and have realtime chat as well as realtime updates of people entering and exiting the room. If you would like to take a look at the finished product you can check it out here -- [Action Cable Chat](http://actionchattin.herokuapp.com/)
+Rails 5 just came out this past week and I thought what better for a first blog post. I am going to walk through building a simple chat app with action cable. By the end of it we will have an app that allows users to sign up, create private chatrooms and have realtime chat as well as realtime updates of people entering and exiting the room. If you would like to take a look at the finished product you can check it out here -- [Action Cable Chat](http://actionchattin.herokuapp.com/).
 
 <!--more-->
 
-While going through this I am going to skip styling to try and keep the length to a minimum and keep the focus on app development. The first portion of it is just going to be setting up the baseline app without and in part 2 we will jump into action cable. I am going to run through every step of the app so if you want to configure your own setup you might want to just jump to [part 2]({% post_url 2016-07-06-action-cable-chat-two %})
+While going through this I am going to skip styling to try and keep the length to a minimum and keep the focus on app development. The first portion of it is just going to be setting up the baseline app and in part 2 we will jump into action cable. I am going to run through every step of the app so if you want to configure your own setup you might want to just jump to [part 2]({% post_url 2016-07-06-action-cable-chat-two %}).
 
 First things first we are going to need to create a new app in Rails 5. If you have yet to upgrade to rails yet go ahead and do so using rails app:update (make sure that you have Ruby 2.2.2 or later). I am going to use postgresql in my app but if you want to use sqlite3 thats fine too. let's also skip turbolinks because it gave me some issues while scoping my chatrooms.
 
@@ -105,13 +105,13 @@ we need to setup our routes for users, sessions and root in config/routes.rb
 
 {% highlight ruby %}
 
-  root to: 'welcome#index'.
-  resources :users, only: [:new, :index, :create]
+  root to: 'welcome#index'
+  resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :destroy, :create]
 {% endhighlight %}
 
 
-Create the corresponding controllers for users and sessions.
+Create the corresponding views and controller for users
 
 {% highlight Ruby %}
 class UsersController < ApplicationController
@@ -143,6 +143,22 @@ class UsersController < ApplicationController
 end
 {% endhighlight %}
 
+{% highlight erb %}
+#app/views/users/new.html.erb
+<%= form_for @user do |f| %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Login" %>
+<% end %>
+{% endhighlight %}
+
+Now create the controller and views for Session
+
 {% highlight ruby %}
 class SessionsController < ApplicationController
 
@@ -170,7 +186,21 @@ class SessionsController < ApplicationController
 end
 {% endhighlight %}
 
-You can see we add everyone to a room when the new user is created. The idea of this is to have one open chat room everyne is subscribed to. Add this first room to a seed file and seed the database.
+{% highlight erb %}
+#app/views/sessions/new.html.erb
+<%= form_for :session, url: sessions_path do |f| %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Login" %>
+<% end %>
+{% endhighlight %}
+
+You can see in the user controller we add everyone to a room when a user is created. The idea of this is to have one open chat room everyne is subscribed to. Add this first room to a seed file and seed the database.
 
 {% highlight ruby %}
 #app/db/seeds.rb
@@ -196,12 +226,11 @@ class ApplicationController < ActionController::Base
 end
 {% endhighlight %}
 
-
-This won't work right away because as you can see we set up a redirect to the rooms_path. We want the user to be redirected to their list of rooms which will eventaully be the rooms index. Lets get that all wired up. Go ahead and create the rooms controller and set up your routes.
+You now can navigate directly to the new user and session pages. On submit it will break though because we redirect a logged in user to the rooms_path which doesn't currently exist. Lets get that all wired up. Go ahead and create the rooms controller and set up your routes.
 
 {% highlight ruby %}
 # config/routes.rb
-resources :rooms, except: [:update, :edit]
+resources :rooms, except: [:update, :edit, :destroy]
 
 # app/controllers/rooms_controller
 class RoomsController < ApplicationController
@@ -273,7 +302,7 @@ At this point we should have a functioning user model. Lets add a basic navbar s
     <% end %>
 {% endhighlight %}
 
-Go ahead and run through login and logouts to see that it is all working appropriately. With that all up and running lets move onto the rooms pages. The idea will be that you can have multiple rooms, and we want to display links to all the show pages for those rooms. So we are going to create two partials that we are going to use inside of the index. One is going to be the form and the other is just the actual room partial.
+Go ahead and run through login and logouts to see that it is all working appropriately. With that all up and running lets move onto the rooms pages. The idea will be that you can have multiple rooms, and we want to display links to all the show pages for those rooms. So we are going to create two partials that we are going to use inside of the index. One is going to be the form and the other is just the room partial itself to display all of the rooms.
 
 
 
@@ -311,9 +340,9 @@ Alright we are almost ready to start working with action cable. Last things we n
 #config/routes.rb
 #lets go ahead and nest these routes with the rooms routes
 
-resources :rooms, except: [:update, :edit] do
-  resources :memberships, only: [:index, :create]
-end
+  resources :rooms, except: [:update, :edit, :destroy] do
+    resources :memberships, only: [:index, :create]
+  end
 
 {% endhighlight %}
 
@@ -331,7 +360,7 @@ class MembershipsController < ApplicationController
 end
 {% endhighlight %}
 
- So you can see that we make a redirect unless member_of_group. Basically we are going to let other members invite to this group after they have been added, but we only want users that are members of the group to be able to add users. We are going to need to create that helper. Let's also go ahead and add a verify logged in method to redirect anyone that isn't signed in. We can attach it as a before action to all of the controllers except users and sessions.
+ So you can see that we call two new helpers here, redirect_with_flash and member_of_group. Basically we are going to let other members invite to this group after they have been added, but we only want users that are members of the group to be able to add users. We are going to need to create those helpers. Let's also go ahead and add a verify logged in method to redirect anyone that isn't signed in. We can attach it as a before action to all of the controllers except users and sessions.
 
 {% highlight ruby %}
 #app/controllers/application_controller
@@ -357,7 +386,7 @@ end
 {% endhighlight %}
 
 {% highlight ruby %}
-#Add the following to the top of the memberships, messages, and rooms controller
+#Add the following to the top of the memberships, and rooms controller
   before_action :verify_logged_in
 {% endhighlight %}
 
@@ -367,15 +396,16 @@ And finally lets create the index view
 #app/views/memberships/index.html.erb
 <h3><%= link_to "go to #{@room.name}",room_path(@room) %></h3>
 <h2 >Add members to <%=@room.name%></h2>
-<h3>Members</h3>
 
+<h4>current members</h4>
 <ul id="member-list">
   <% @memberships.each do |member| %>
     <li><%= member.name %></li>
   <% end %>
 </ul>
 
-<ul id="#add-users">
+<h4>Add Members</h4>
+<ul id="add-users">
 <% @users.each do |user| %>
   <li>
     <%= user.username %>
@@ -394,10 +424,14 @@ Also a quick method on our membership model to make accessing the member name a 
   end
 {% endhighlight %}
 
-Now what you <em>should</em> do for the index is break those two list iterations out into helpers but for the purpose of brevity we are just going to keep moving. The idea here is when a member user is on this page they can click the checkbox to add a user to the page. Time to create our create action for members. We are only going to get XHR requests for this app and not worry about older compatibility or error handling.
+Now what you <em>should</em> do for the index is break those two list iterations out into helpers but for the purpose of brevity we are just going to keep moving. The idea here is when a member user is on this page they can click the checkbox to add a user to the page. When they click the checkbox we want to send an ajax request to the Membership create action. We want a successful creation to send us back the info on that user so we can remove him from the add member list to the current member list.
+
+Time to make the create action for members. We are only going to get XHR requests for this app and not worry about older compatibility or error handling.
 
 {% highlight ruby %}
 #app/controllers/memberships_controller.rb
+  before_action :verify_logged_in
+
   def create
     @room = Room.find(params[:room_id])
     redirect_with_flash unless member_of_group
@@ -448,6 +482,8 @@ I want to add one validation here to our Membership. We should validate that no 
 validates_uniqueness_of :user_id, :scope => :room_id
 {% endhighlight %}
 
+Try and create a new group now. You will be directed to the memberships page and when you check a checkbox next to a user name they will move from the add members list to the current members list.
+
 Last but not least we need to create our rooms show page. After we have this up and running we are ready to integrate our WebSockets!!! So for this bit we want to have our rooms first render all of the messages, we are gonna limit it to 1000 cause this app is gonna take off! Let's go ahead and fill out the show action in rooms and create the view.
 
 {% highlight ruby %}
@@ -476,19 +512,15 @@ Last but not least we need to create our rooms show page. After we have this up 
 </ul>
 
 <%= link_to "invite people", room_memberships_path(@room) %>
-<%= render @messages %>
-
-<%= render partial: "/messages/form", locals: {room: @room, message: @message} %>
 
 {% endhighlight %}
 
 We are going to use that green-dot.png to show when users enter and exit the room eventually. If you are following along you can grab the image from this [repo]({{ "https://github.com/thomas-yancey/action-cable-chat-template" }}).
 
-Now we need to put the form  and message partials we called above in the messages view folder. Lets create that controller and then make the partials.
+Like a standard chat app we are going to list all messages and than at the bottom have a place to enter a new message. Create the controller and partials for messages.
 
 {% highlight erb %}
 #app/views/messages/_form.html.erb
-
 <%= form_for message do |f| %>
 
   <%= f.hidden_field :room_id, value: room.id %>
@@ -501,7 +533,6 @@ Now we need to put the form  and message partials we called above in the message
 
 {% highlight erb %}
 #app/views/messages/_message.html.erb
-
 <%= form_for message do |f| %>
 
   <%= f.hidden_field :room_id, value: room.id %>
@@ -541,10 +572,13 @@ class MessagesController < ApplicationController
 end
 {% endhighlight %}
 
+Now render all of the messages in the room and add the form just below it. Put these two lines at the bottom of your rooms show page
+
+{% highlight ruby %}
+#app/views/rooms/show.html.erb
+<%= render partial: "/messages/form", locals: {room: @room, message: @message} %>
+<%= render @messages %>
+
+{% endhighlight %}
+
 Alright! We made it through, currently we have a pretty basic outline of an app. You can login, logout, create chatrooms, add members, and post messages, Next post we are going make this chat realtime!
-
-## Go through all of your before action for validations
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
