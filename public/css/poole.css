@@ -152,6 +152,15 @@ code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
+
+figure {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: -10px;
+    -webkit-margin-end: -10px;
+}
+
 code {
   padding: .25em .5em;
   font-size: 85%;
@@ -163,11 +172,12 @@ pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: 1rem;
-  font-size: .8rem;
+  /*padding: 1rem;*/
+  font-size: .7rem;
   line-height: 1.4;
   white-space: pre;
-  white-space: pre-wrap;
+  overflow:;
+  /*white-space: pre-wrap;*/
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f9f9f9;

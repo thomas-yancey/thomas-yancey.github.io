@@ -421,7 +421,6 @@ heroku run rake db:seed
 {% endhighlight %}
 
 Hope that worked out for you!
-## Make sure to go back and add cookies.signed in the users controller and the sessions controller when going through websockets, set up "/cable" on client side, get redis addon:redistogo. room channels scoped
 
 ## Go through all of your before action for validations
 

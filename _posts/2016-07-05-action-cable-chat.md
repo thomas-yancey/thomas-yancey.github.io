@@ -9,27 +9,30 @@ Rails 5 just came out this past week and I thought what better for a first blog 
 
 <!--more-->
 
-While going through this I am going to skip styling to try and keep the length to a minimum and only focus on the action cable aspect. The first portion of it is just going to be setting up the baseline app without action cable stuff. I am going to run through every step so If you would like to skip that and just get to actioncable you can scroll down.
+While going through this I am going to skip styling to try and keep the length to a minimum and keep the focus on app development. The first portion of it is just going to be setting up the baseline app without and in part 2 we will jump into action cable. I am going to run through every step of the app so if you want to configure your own setup you might want to just jump to [part 2]({% post_url 2016-07-06-action-cable-chat-two %})
 
-First things first we are going to need to create a new app in Rails 5. If you have yet to upgrade to rails yet go ahead and do so using rails app:update (make sure that you have Ruby 2.2.2 or later). I am going to use postgresql in my app but if you want to use sqlite3 thats fine too.
+First things first we are going to need to create a new app in Rails 5. If you have yet to upgrade to rails yet go ahead and do so using rails app:update (make sure that you have Ruby 2.2.2 or later). I am going to use postgresql in my app but if you want to use sqlite3 thats fine too. let's also skip turbolinks because it gave me some issues while scoping my chatrooms.
 
 {% highlight powershell %}
-rails _5.0.0_ new action-cable-chat -d postgresql
+rails _5.0.0_ new action-cable-chat -d postgresql --skip-turbolinks
 {% endhighlight %}
 
 If you boot up your app you should see the fancy new rails 5 landing page.
 
 On creating the new app you are going to want to uncomment redis in your gemfile. We are eventually going to need it at as our data store for our action cable channels. I am going to also uncomment bcrypt since I am going to build my own user model, but if you want you can use devise to speed things up.
 
-Let's go ahead and set up our baseline app. Our database is going to be made up of 4 tables -- users, rooms, messages, and memberships. The memberships table is a join and is where we are going to be able to make private groups.
+{% highlight powershell %}
+bundle install
+rails db:create
+{% endhighlight %}
 
+Let's go ahead and set up our baseline app. Our database is going to be made up of 4 tables -- users, rooms, messages, and memberships. The memberships table is a join and is where we are going to be able to make private groups.
 
 {% highlight powershell %}
   rails g model User username:string password_digest:string
   rails g model Room name:string
   rails g model Message content:text user:references room:references
   rails g model Membership user:references room:references
-
 {% endhighlight %}
 
 Lets go ahead and add some associations and validations to our models we just generated.
@@ -92,11 +95,17 @@ If you test that out in your console you should be able to create all of the fie
   User.first.rooms << Room.first
 {% endhighlight %}
 
-Now lets define our root_path and set it up through a welcome controller. use rails g controller Welcome index and than change your routes file to set root to: 'welcome#index'. Make a simple view in views/welcome/index.
+Now to define some routes including our route path. create a welcome controller with index.
 
-we need to setup our routes for users and sessions in config/routes.rb
+{% highlight powershell %}
+rails g controller Welcome index
+{% endhighlight %}
+
+we need to setup our routes for users, sessions and root in config/routes.rb
 
 {% highlight ruby %}
+
+  root to: 'welcome#index'.
   resources :users, only: [:new, :index, :create]
   resources :sessions, only: [:new, :destroy, :create]
 {% endhighlight %}
@@ -161,7 +170,14 @@ class SessionsController < ApplicationController
 end
 {% endhighlight %}
 
-We want to be able to access the current user and check whether someone is logged in so lets set up those helpers
+You can see we add everyone to a room when the new user is created. The idea of this is to have one open chat room everyne is subscribed to. Add this first room to a seed file and seed the database.
+
+{% highlight ruby %}
+#app/db/seeds.rb
+Room.create(name: "open_chat")
+{% endhighlight %}
+
+We want to be able to access the current user and check whether someone is logged in so lets set up those helpers.
 
 {% highlight ruby %}
 class ApplicationController < ActionController::Base
@@ -405,7 +421,6 @@ Now lets AJAX this puppy! on click of the div we want to create a membership for
 
 $( document ).ready(function() {
   $('#add-users input').on ('click', function(){
-    debugger
     var userId = $(this).attr("id").split("-")[0];
     var data = {user_id: userId};
     $.ajax({
@@ -413,7 +428,6 @@ $( document ).ready(function() {
       data: data,
       method: 'post'
     }).done(function(res){
-      debugger
       var userData = JSON.parse(res);
       $('#' + userData.id + "-add-member").parent().remove();
       $('#member-list').append(memberAppendBuilder(userData));
@@ -528,10 +542,6 @@ end
 {% endhighlight %}
 
 Alright! We made it through, currently we have a pretty basic outline of an app. You can login, logout, create chatrooms, add members, and post messages, Next post we are going make this chat realtime!
-
-<img src="http://i.imgur.com/57JT4cA.gifv">
-
-## Make sure to go back and add cookies.signed in the users controller and the sessions controller when going through websockets, set up "/cable" on client side, get redis addon:redistogo. room channels scoped
 
 ## Go through all of your before action for validations
 
