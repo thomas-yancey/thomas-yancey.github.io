@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 
 
-Last Post we went through and built out the chat app without any of the realtime features. If you want to work along you can fork the repo from here [action-cable-chat-example]({{"https://github.com/thomas-yancey/action-cable-chat-template"}}).
+Last post we went through and built out the chat app without any of the realtime features. If you want to work along you can fork the repo from here [action-cable-chat-example]({{"https://github.com/thomas-yancey/action-cable-chat-template"}}).
 
 <!--more-->
 
