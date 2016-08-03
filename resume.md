@@ -5,10 +5,13 @@ linkedin.com/in/tomyancey
 www.tomyancey.me
 blog.tomyancey.me
 www.medium.com/@tomyncy618
+
 ##Professional Summary
 I love building tools from scratch that can be meaningful and useful. I have a passion for developing web applications and would like to leverage my previous experience in financial management as I continue to grow as a developer.
 
 ##Experience
+###Codecademy Advisor
+####Mentor students who are enrolled in Codecademy pro. Help them debug and understand the code that they are working on. Mentor accross many different courses (HTML, CSS, Javascript, Ruby etc..). Help students define their goals and guide them on a track that fits their desired skillset. 
 ###Asset Manager
 ####MTAG Services LLC, Washington,DC, April 2013 - February 2016
 Managed portfolios of tax liens representing just under $100 Million in original principal value. Worked closely with attorneys and third party brokers to facilitate redemption and collection e orts. oversaw all legal filings, property sales, and lien management. Created and maintained forms for due diligence on thousands of commercial and residential properties. Performed and presented financial analysis on portfolio performance and projections to clients along with creating ad hoc reports as requested. Responsible for collection of all available asset information by developing ruby scripts for web scraping. Managed all post acquisition activities from foreclosure proceedings to eventual disposition and sale of properties.
