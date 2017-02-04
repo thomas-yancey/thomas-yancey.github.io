@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="BKMapPLUTO" id="BKMapPLUTO">
+	<SimpleField name="Borough" type="string"></SimpleField>
+	<SimpleField name="Block" type="int"></SimpleField>
+	<SimpleField name="Lot" type="int"></SimpleField>
+	<SimpleField name="CD" type="int"></SimpleField>
+	<SimpleField name="CT2010" type="string"></SimpleField>
+	<SimpleField name="CB2010" type="string"></SimpleField>
+	<SimpleField name="SchoolDist" type="string"></SimpleField>
+	<SimpleField name="Council" type="int"></SimpleField>
+	<SimpleField name="ZipCode" type="int"></SimpleField>
+	<SimpleField name="FireComp" type="string"></SimpleField>
+	<SimpleField name="PolicePrct" type="int"></SimpleField>
+	<SimpleField name="HealthArea" type="int"></SimpleField>
+	<SimpleField name="SanitBoro" type="string"></SimpleField>
+	<SimpleField name="SanitDistr" type="string"></SimpleField>
+	<SimpleField name="SanitSub" type="string"></SimpleField>
+	<SimpleField name="Address" type="string"></SimpleField>
+	<SimpleField name="ZoneDist1" type="string"></SimpleField>
+	<SimpleField name="ZoneDist2" type="string"></SimpleField>
+	<SimpleField name="ZoneDist3" type="string"></SimpleField>
+	<SimpleField name="ZoneDist4" type="string"></SimpleField>
+	<SimpleField name="Overlay1" type="string"></SimpleField>
+	<SimpleField name="Overlay2" type="string"></SimpleField>
+	<SimpleField name="SPDist1" type="string"></SimpleField>
+	<SimpleField name="SPDist2" type="string"></SimpleField>
+	<SimpleField name="SPDist3" type="string"></SimpleField>
+	<SimpleField name="LtdHeight" type="string"></SimpleField>
+	<SimpleField name="SplitZone" type="string"></SimpleField>
+	<SimpleField name="BldgClass" type="string"></SimpleField>
+	<SimpleField name="LandUse" type="string"></SimpleField>
+	<SimpleField name="Easements" type="int"></SimpleField>
+	<SimpleField name="OwnerType" type="string"></SimpleField>
+	<SimpleField name="OwnerName" type="string"></SimpleField>
+	<SimpleField name="LotArea" type="int"></SimpleField>
+	<SimpleField name="BldgArea" type="int"></SimpleField>
+	<SimpleField name="ComArea" type="int"></SimpleField>
+	<SimpleField name="ResArea" type="int"></SimpleField>
+	<SimpleField name="OfficeArea" type="int"></SimpleField>
+	<SimpleField name="RetailArea" type="int"></SimpleField>
+	<SimpleField name="GarageArea" type="int"></SimpleField>
+	<SimpleField name="StrgeArea" type="int"></SimpleField>
+	<SimpleField name="FactryArea" type="int"></SimpleField>
+	<SimpleField name="OtherArea" type="int"></SimpleField>
+	<SimpleField name="AreaSource" type="string"></SimpleField>
+	<SimpleField name="NumBldgs" type="int"></SimpleField>
+	<SimpleField name="NumFloors" type="float"></SimpleField>
+	<SimpleField name="UnitsRes" type="int"></SimpleField>
+	<SimpleField name="UnitsTotal" type="int"></SimpleField>
+	<SimpleField name="LotFront" type="float"></SimpleField>
+	<SimpleField name="LotDepth" type="float"></SimpleField>
+	<SimpleField name="BldgFront" type="float"></SimpleField>
+	<SimpleField name="BldgDepth" type="float"></SimpleField>
+	<SimpleField name="Ext" type="string"></SimpleField>
+	<SimpleField name="ProxCode" type="string"></SimpleField>
+	<SimpleField name="IrrLotCode" type="string"></SimpleField>
+	<SimpleField name="LotType" type="string"></SimpleField>
+	<SimpleField name="BsmtCode" type="string"></SimpleField>
+	<SimpleField name="AssessLand" type="float"></SimpleField>
+	<SimpleField name="AssessTot" type="float"></SimpleField>
+	<SimpleField name="ExemptLand" type="float"></SimpleField>
+	<SimpleField name="ExemptTot" type="float"></SimpleField>
+	<SimpleField name="YearBuilt" type="int"></SimpleField>
+	<SimpleField name="YearAlter1" type="int"></SimpleField>
+	<SimpleField name="YearAlter2" type="int"></SimpleField>
+	<SimpleField name="HistDist" type="string"></SimpleField>
+	<SimpleField name="Landmark" type="string"></SimpleField>
+	<SimpleField name="BuiltFAR" type="float"></SimpleField>
+	<SimpleField name="ResidFAR" type="float"></SimpleField>
+	<SimpleField name="CommFAR" type="float"></SimpleField>
+	<SimpleField name="FacilFAR" type="float"></SimpleField>
+	<SimpleField name="BoroCode" type="int"></SimpleField>
+	<SimpleField name="BBL" type="float"></SimpleField>
+	<SimpleField name="CondoNo" type="int"></SimpleField>
+	<SimpleField name="Tract2010" type="string"></SimpleField>
+	<SimpleField name="XCoord" type="int"></SimpleField>
+	<SimpleField name="YCoord" type="int"></SimpleField>
+	<SimpleField name="ZoneMap" type="string"></SimpleField>
+	<SimpleField name="ZMCode" type="string"></SimpleField>
+	<SimpleField name="Sanborn" type="string"></SimpleField>
+	<SimpleField name="TaxMap" type="string"></SimpleField>
+	<SimpleField name="EDesigNum" type="string"></SimpleField>
+	<SimpleField name="APPBBL" type="float"></SimpleField>
+	<SimpleField name="APPDate" type="string"></SimpleField>
+	<SimpleField name="PLUTOMapID" type="string"></SimpleField>
+	<SimpleField name="Version" type="string"></SimpleField>
+	<SimpleField name="MAPPLUTO_F" type="int"></SimpleField>
+	<SimpleField name="SHAPE_Leng" type="float"></SimpleField>
+	<SimpleField name="SHAPE_Area" type="float"></SimpleField>
+</Schema>
+<Folder><name>BKMapPLUTO</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#BKMapPLUTO">
+		<SimpleData name="Borough">BK</SimpleData>
+		<SimpleData name="Block">7036</SimpleData>
+		<SimpleData name="Lot">23</SimpleData>
+		<SimpleData name="CD">313</SimpleData>
+		<SimpleData name="CT2010">336</SimpleData>
+		<SimpleData name="SchoolDist">21</SimpleData>
+		<SimpleData name="Council">47</SimpleData>
+		<SimpleData name="ZipCode">11224</SimpleData>
+		<SimpleData name="FireComp">E318</SimpleData>
+		<SimpleData name="PolicePrct">60</SimpleData>
+		<SimpleData name="HealthArea">9010</SimpleData>
+		<SimpleData name="SanitBoro">3</SimpleData>
+		<SimpleData name="SanitDistr">13</SimpleData>
+		<SimpleData name="SanitSub">2D</SimpleData>
+		<SimpleData name="Address">BEACH RESERVATION</SimpleData>
+		<SimpleData name="ZoneDist1">R3-1</SimpleData>
+		<SimpleData name="SplitZone">N</SimpleData>
+		<SimpleData name="BldgClass">V0</SimpleData>
+		<SimpleData name="LandUse">11</SimpleData>
+		<SimpleData name="Easements">0</SimpleData>
+		<SimpleData name="OwnerName">THE SEA GATE ASSOC</SimpleData>
+		<SimpleData name="LotArea">81828</SimpleData>
+		<SimpleData name="BldgArea">0</SimpleData>
+		<SimpleData name="ComArea">0</SimpleData>
+		<SimpleData name="ResArea">0</SimpleData>
+		<SimpleData name="OfficeArea">0</SimpleData>
+		<SimpleData name="RetailArea">0</SimpleData>
+		<SimpleData name="GarageArea">0</SimpleData>
+		<SimpleData name="StrgeArea">0</SimpleData>
+		<SimpleData name="FactryArea">0</SimpleData>
+		<SimpleData name="OtherArea">0</SimpleData>
+		<SimpleData name="AreaSource">4</SimpleData>
+		<SimpleData name="NumBldgs">0</SimpleData>
+		<SimpleData name="NumFloors">0.00000000000</SimpleData>
+		<SimpleData name="UnitsRes">0</SimpleData>
+		<SimpleData name="UnitsTotal">0</SimpleData>
+		<SimpleData name="LotFront">420.00000000000</SimpleData>
+		<SimpleData name="LotDepth">194.83000000000</SimpleData>
+		<SimpleData name="BldgFront">0.00000000000</SimpleData>
+		<SimpleData name="BldgDepth">0.00000000000</SimpleData>
+		<SimpleData name="ProxCode">0</SimpleData>
+		<SimpleData name="IrrLotCode">Y</SimpleData>
+		<SimpleData name="LotType">2</SimpleData>
+		<SimpleData name="BsmtCode">5</SimpleData>
+		<SimpleData name="AssessLand">2241.00000000000</SimpleData>
+		<SimpleData name="AssessTot">2241.00000000000</SimpleData>
+		<SimpleData name="ExemptLand">0.00000000000</SimpleData>
+		<SimpleData name="ExemptTot">0.00000000000</SimpleData>
+		<SimpleData name="YearBuilt">0</SimpleData>
+		<SimpleData name="YearAlter1">0</SimpleData>
+		<SimpleData name="YearAlter2">0</SimpleData>
+		<SimpleData name="BuiltFAR">0.00000000000</SimpleData>
+		<SimpleData name="ResidFAR">0.60000000000</SimpleData>
+		<SimpleData name="CommFAR">0.00000000000</SimpleData>
+		<SimpleData name="FacilFAR">1.00000000000</SimpleData>
+		<SimpleData name="BoroCode">3</SimpleData>
+		<SimpleData name="BBL">3070360023.00000000000</SimpleData>
+		<SimpleData name="CondoNo">0</SimpleData>
+		<SimpleData name="Tract2010">0336</SimpleData>
+		<SimpleData name="XCoord">0</SimpleData>
+		<SimpleData name="YCoord">0</SimpleData>
+		<SimpleData name="ZoneMap">28b</SimpleData>
+		<SimpleData name="Sanborn">318 082</SimpleData>
+		<SimpleData name="TaxMap">32104</SimpleData>
+		<SimpleData name="APPBBL">0.00000000000</SimpleData>
+		<SimpleData name="PLUTOMapID">1</SimpleData>
+		<SimpleData name="Version">16V2</SimpleData>
+		<SimpleData name="MAPPLUTO_F">0</SimpleData>
+		<SimpleData name="SHAPE_Leng">1008.65956152000</SimpleData>
+		<SimpleData name="SHAPE_Area">48254.89788960000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-74.012372767643967,40.577446917601613 -74.012431842383691,40.577443121199913 -74.012418796244788,40.577251563339097 -74.012386623441884,40.577078293417159 -74.012383342334005,40.57705371735068 -74.012391802908724,40.576686641802958 -74.012385884660645,40.576627395309742 -74.012714552310356,40.576545766279153 -74.012717968330847,40.576556182430238 -74.012723012238212,40.576570704077945 -74.012726934916714,40.576580098556782 -74.012730297795116,40.57659120256109 -74.012734780045932,40.576601451160499 -74.012742627340472,40.576622805959218 -74.012747109595296,40.576633054558066 -74.012751592735071,40.576644160084307 -74.012757195411041,40.576655262741191 -74.012762798415295,40.57666807321452 -74.012769524557982,40.576680887954382 -74.012775127566627,40.576693697878085 -74.012779608881559,40.576706509024227 -74.012785214611142,40.576718467509082 -74.012794179311712,40.576739818885947 -74.012800903406301,40.576756903989313 -74.012806508686339,40.576773985923197 -74.012810993220185,40.576788505433271 -74.012816597686012,40.576801317001596 -74.01282331897643,40.576814984274634 -74.012833406019752,40.576832065157809 -74.012841250000179,40.576850856303373 -74.012843493928244,40.576861106795292 -74.012847975823348,40.576873064304657 -74.01285133945656,40.57688416830505 -74.012859183941302,40.57690552089975 -74.012863666952853,40.576915768944751 -74.012869271830709,40.576926874340479 -74.012874874879174,40.576939684808011 -74.012882721537935,40.576961037949701 -74.012889445451663,40.576980683949103 -74.012895051328414,40.576996912793376 -74.012898412425514,40.577009724060282 -74.012902896500563,40.577021683213943 -74.012909619600649,40.577037057200222 -74.012917465455956,40.577054139425414 -74.012926429748134,40.577072929340879 -74.012935395874521,40.577090011438727 -74.012944361839786,40.577106238804163 -74.012951088392271,40.577120759702602 -74.012961171914625,40.577137840574487 -74.012971256162757,40.577154924739169 -74.012980223585416,40.577171152101506 -74.01298694461434,40.577183110999002 -74.01299479039595,40.577195923951599 -74.013000392604653,40.577207879132075 -74.013010478700394,40.577223254378445 -74.01302168390454,40.577243751848982 -74.013032889502512,40.577262542599698 -74.013038494990283,40.577272791059166 -74.013044097767235,40.577283896446289 -74.013049698938815,40.577294145454616 -74.013056425031721,40.577306101053559 -74.013062028701569,40.577318061171404 -74.013068753693503,40.577331725684225 -74.013075476361266,40.577344537112083 -74.013081079819159,40.577359057032488 -74.013088923479557,40.577371869978762 -74.013095649922306,40.577385534489764 -74.01310349325351,40.577396639069484 -74.013111337642172,40.577409449818198 -74.013119181866216,40.577421406932615 -74.013127025373052,40.577433364046534 -74.013135988983194,40.577444466849059 -74.013150284286908,40.577464583523614 -74.01236891113777,40.57751104759992 -74.012372767643967,40.577446917601613</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#BKMapPLUTO">
+		<SimpleData name="Borough">BK</SimpleData>
+		<SimpleData name="Block">7037</SimpleData>
+		<SimpleData name="Lot">45</SimpleData>
+		<SimpleData name="CD">313</SimpleData>
+		<SimpleData name="CT2010">336</SimpleData>
+		<SimpleData name="SchoolDist">21</SimpleData>
+		<SimpleData name="Council">47</SimpleData>
+		<SimpleData name="ZipCode">11224</SimpleData>
+		<SimpleData name="FireComp">E318</SimpleData>
+		<SimpleData name="PolicePrct">60</SimpleData>
+		<SimpleData name="HealthArea">9010</SimpleData>
+		<SimpleData name="SanitBoro">3</SimpleData>
+		<SimpleData name="SanitDistr">13</SimpleData>
+		<SimpleData name="SanitSub">2D</SimpleData>
+		<SimpleData name="Address">BEACH 46 STREET</SimpleData>
+		<SimpleData name="ZoneDist1">R3-1</SimpleData>
+		<SimpleData name="SplitZone">N</SimpleData>
+		<SimpleData name="BldgClass">V0</SimpleData>
+		<SimpleData name="LandUse">11</SimpleData>
+		<SimpleData name="Easements">0</SimpleData>
+		<SimpleData name="OwnerName">SEA GATE ASSN</SimpleData>
+		<SimpleData name="LotArea">38010</SimpleData>
+		<SimpleData name="BldgArea">0</SimpleData>
+		<SimpleData name="ComArea">0</SimpleData>
+		<SimpleData name="ResArea">0</SimpleData>
+		<SimpleData name="OfficeArea">0</SimpleData>
+		<SimpleData name="RetailArea">0</SimpleData>
+		<SimpleData name="GarageArea">0</SimpleData>
+		<SimpleData name="StrgeArea">0</SimpleData>
+		<SimpleData name="FactryArea">0</SimpleData>
+		<SimpleData name="OtherArea">0</SimpleData>
+		<SimpleData name="AreaSource">4</SimpleData>
+		<SimpleData name="NumBldgs">0</SimpleData>
+		<SimpleData name="NumFloors">0.00000000000</SimpleData>
+		<SimpleData name="UnitsRes">0</SimpleData>
+		<SimpleData name="UnitsTotal">0</SimpleData>
+		<SimpleData name="LotFront">90.50000000000</SimpleData>
+		<SimpleData name="LotDepth">420.00000000000</SimpleData>
+		<SimpleData name="BldgFront">0.00000000000</SimpleData>
+		<SimpleData name="BldgDepth">0.00000000000</SimpleData>
+		<SimpleData name="ProxCode">0</SimpleData>
+		<SimpleData name="IrrLotCode">Y</SimpleData>
+		<SimpleData name="LotType">2</SimpleData>
+		<SimpleData name="BsmtCode">5</SimpleData>
+		<SimpleData name="AssessLand">822.00000000000</SimpleData>
+		<SimpleData name="AssessTot">822.00000000000</SimpleData>
+		<SimpleData name="ExemptLand">0.00000000000</SimpleData>
+		<SimpleData name="ExemptTot">0.00000000000</SimpleData>
+		<SimpleData name="YearBuilt">0</SimpleData>
+		<SimpleData name="YearAlter1">0</SimpleData>
+		<SimpleData name="YearAlter2">0</SimpleData>
+		<SimpleData name="BuiltFAR">0.00000000000</SimpleData>
+		<SimpleData name="ResidFAR">0.60000000000</SimpleData>
+		<SimpleData name="CommFAR">0.00000000000</SimpleData>
+		<SimpleData name="FacilFAR">1.00000000000</SimpleData>
+		<SimpleData name="BoroCode">3</SimpleData>
+		<SimpleData name="BBL">3070370045.00000000000</SimpleData>
+		<SimpleData name="CondoNo">0</SimpleData>
+		<SimpleData name="Tract2010">0336</SimpleData>
+		<SimpleData name="XCoord">0</SimpleData>
+		<SimpleData name="YCoord">0</SimpleData>
+		<SimpleData name="ZoneMap">28b</SimpleData>
+		<SimpleData name="Sanborn">318 082</SimpleData>
+		<SimpleData name="TaxMap">32104</SimpleData>
+		<SimpleData name="APPBBL">0.00000000000</SimpleData>
+		<SimpleData name="PLUTOMapID">1</SimpleData>
+		<SimpleData name="Version">16V2</SimpleData>
+		<SimpleData name="MAPPLUTO_F">0</SimpleData>
+		<SimpleData name="SHAPE_Leng">466.77846262700</SimpleData>
+		<SimpleData name="SHAPE_Area">12182.42039080000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-74.012379406309293,40.576575988583926 -74.012373488129128,40.57654420055453 -74.012365206433358,40.576505159361481 -74.012342727902904,40.576427022712714 -74.01232302955448,40.576374374555357 -74.012299513676211,40.576327587507606 -74.012603837505608,40.576142487241277 -74.012608109697311,40.576153883745903 -74.012611471814651,40.576164988303162 -74.012615956501264,40.576176945821999 -74.012620439191025,40.576189757523778 -74.012623804676252,40.576203424079893 -74.012627166327363,40.576219652087055 -74.012631651828514,40.576235882166323 -74.012635014203028,40.576252109624157 -74.012639498591355,40.57627004697104 -74.012642865216122,40.576289691708546 -74.012647346964272,40.576305067604665 -74.012650710786062,40.576321295610711 -74.012654074124256,40.576334962166072 -74.012657436419872,40.576346919257766 -74.012659680950335,40.576360585936179 -74.012663042132544,40.576374253040392 -74.012666407887735,40.576393044692146 -74.012668650657517,40.576405002455857 -74.012670892150126,40.576417813853546 -74.012673136361698,40.57642977271486 -74.012676498503467,40.57644087617205 -74.012680981617862,40.576451977858504 -74.012684343762643,40.576463084060215 -74.012688826484634,40.576475895210002 -74.012693309928622,40.576488708006394 -74.012697795533867,40.576501519155443 -74.01270227682123,40.576514330853819 -74.012707881963379,40.57652714352556 -74.012713486155306,40.576542517647759 -74.012714552310356,40.576545766279153 -74.012385884660645,40.576627395309742 -74.012379406309293,40.576575988583926</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  </Folder></Document></kml>
