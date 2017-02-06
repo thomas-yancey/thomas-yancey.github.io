@@ -61,33 +61,33 @@
     <Placemark>
       <name>Blue Line</name>
       <styleUrl>#blueLine</styleUrl>
-      <Polygon>
+      <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
 -74.005194443472206,40.577116377277164 -74.00553611337709,40.577078900244892 -74.005551703747969,40.577160381723715 -74.005210032715098,40.577197858802101 -74.005194443472206,40.577116377277164
         </coordinates>
-      </Polygon>
+      </LineString>
     </Placemark>
 
     <Placemark>
       <name>Red Line</name>
       <styleUrl>#redLine</styleUrl>
-      <Polygon>
+      <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
 -74.005092375480885,40.577736654128785 -74.005147679510415,40.577730563141714 -74.005199262037294,40.577724881821098 -74.005251747256935,40.578001261346081 -74.005144861707393,40.578013034251178 -74.005092375480885,40.577736654128785        </coordinates>
-      </Polygon>
+      </LineString>
     </Placemark>
 
     <Placemark>
       <name>Green Line</name>
       <styleUrl>#greenLine</styleUrl>
-      <Polygon>
+      <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
 -74.008538720908604,40.575940234964946 -74.008681328206563,40.575925053198453 -74.008733468607062,40.57620145975082 -74.008590955109966,40.576217148814294 -74.008538720908604,40.575940234964946
         </coordinates>
-      </Polygon>
+      </LineString>
     </Placemark>
   </Document>
 </kml>
