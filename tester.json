@@ -1,0 +1,901 @@
+{
+  "currentPageToken": null,
+  "currentPageUrl": "/services/data/v39.0/chatter/feeds/record/0F946000000aEEiCAM/feed-elements",
+  "elements": [
+    {
+      "actor": {
+        "additionalLabel": null,
+        "communityNickname": "speek",
+        "companyName": "LEO",
+        "displayName": "Stephen Peek",
+        "firstName": "Stephen",
+        "id": "00546000001KgbLAAS",
+        "isActive": true,
+        "isInThisCommunity": true,
+        "lastName": "Peek",
+        "motif": {
+          "color": "65CAE4",
+          "largeIconUrl": "/img/icon/profile64.png",
+          "mediumIconUrl": "/img/icon/profile32.png",
+          "smallIconUrl": "/img/icon/profile16.png",
+          "svgIconUrl": null
+        },
+        "mySubscription": null,
+        "name": "Stephen Peek",
+        "photo": {
+          "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/ncsphoto/Q2BGsLVTeqxnmAxRevD5013GTLYtVdmZLx_OjOGy-kcY8zwheCIbvzddhw8QfENDjn6tD8D0fDxyCg5TsLYoyA%3D%3D",
+          "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/F",
+          "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/M",
+          "photoVersionId": "72946000000tfdlAAA",
+          "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/T",
+          "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/ncsphoto/Q2BGsLVTeqxnmAxRevD5013GTLYtVdmZLx_OjOGy-kdwyrU_JMMbtuOhnp-gZU7oKSUa7OqJqbqaFKboZs9EMQ%3D%3D",
+          "url": "/services/data/v39.0/connect/user-profiles/00546000001KgbLAAS/photo"
+        },
+        "reputation": null,
+        "stamps": [],
+        "title": null,
+        "type": "User",
+        "url": "/services/data/v39.0/chatter/users/00546000001KgbLAAS",
+        "userType": "ChatterOnly"
+      },
+      "body": {
+        "isRichText": false,
+        "messageSegments": [
+          {
+            "text": "Test in app",
+            "type": "Text"
+          }
+        ],
+        "text": "Test in app"
+      },
+      "capabilities": {
+        "associatedActions": {
+          "platformActionGroups": []
+        },
+        "bookmarks": {
+          "isBookmarkedByCurrentUser": false
+        },
+        "chatterLikes": {
+          "isLikedByCurrentUser": false,
+          "likesMessage": null,
+          "myLike": null,
+          "page": {
+            "currentPageToken": 0,
+            "currentPageUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007aU41CAE/capabilities/chatter-likes/items",
+            "items": [],
+            "nextPageToken": null,
+            "nextPageUrl": null,
+            "previousPageToken": null,
+            "previousPageUrl": null,
+            "total": 0
+          }
+        },
+        "comments": {
+          "page": {
+            "currentPageToken": null,
+            "currentPageUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007aU41CAE/capabilities/comments/items",
+            "items": [],
+            "nextPageToken": null,
+            "nextPageUrl": null,
+            "total": 0
+          }
+        },
+        "edit": {
+          "isEditRestricted": true,
+          "isEditableByMeUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007aU41CAE/capabilities/edit/is-editable-by-me",
+          "lastEditedBy": null,
+          "lastEditedDate": null,
+          "latestRevision": 1,
+          "relativeLastEditedDate": null
+        },
+        "interactions": {
+          "count": 0
+        },
+        "mute": {
+          "isMutedByMe": false
+        },
+        "status": {
+          "feedEntityStatus": "Published",
+          "isApprovableByMe": false
+        },
+        "topics": {
+          "canAssignTopics": true,
+          "items": []
+        }
+      },
+      "clientInfo": {
+        "applicationName": "StateFarmPaperless",
+        "applicationUrl": "https://www.paperless.events"
+      },
+      "createdDate": "2017-04-19T16:11:30.000Z",
+      "event": false,
+      "feedElementType": "FeedItem",
+      "header": {
+        "isRichText": null,
+        "messageSegments": [
+          {
+            "motif": {
+              "color": "65CAE4",
+              "largeIconUrl": "/img/icon/profile64.png",
+              "mediumIconUrl": "/img/icon/profile32.png",
+              "smallIconUrl": "/img/icon/profile16.png",
+              "svgIconUrl": null
+            },
+            "reference": {
+              "id": "00546000001KgbLAAS",
+              "url": "/services/data/v39.0/chatter/users/00546000001KgbLAAS"
+            },
+            "text": "Stephen Peek",
+            "type": "EntityLink"
+          }
+        ],
+        "text": "Stephen Peek"
+      },
+      "id": "0D546000007aU41CAE",
+      "isDeleteRestricted": false,
+      "isSharable": false,
+      "modifiedDate": "2017-04-19T16:11:30.000Z",
+      "originalFeedItem": null,
+      "originalFeedItemActor": null,
+      "parent": {
+        "additionalLabel": "Private",
+        "announcement": null,
+        "bannerPhoto": {
+          "bannerPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/B",
+          "bannerPhotoVersionId": null,
+          "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM/banner-photo"
+        },
+        "canHaveChatterGuests": false,
+        "community": null,
+        "description": "This Chatter group is used as a test",
+        "emailToChatterAddress": "0F946000000aEEiCAM@post.46-15fpeeaa.na40.chatter.salesforce.com",
+        "id": "0F946000000aEEiCAM",
+        "isArchived": false,
+        "isAutoArchiveDisabled": false,
+        "isBroadcast": false,
+        "lastFeedElementPostDate": "2017-04-19T16:11:30.000Z",
+        "memberCount": 5,
+        "motif": {
+          "color": "83B6FF",
+          "largeIconUrl": "/img/icon/groups64.png",
+          "mediumIconUrl": "/img/icon/groups32.png",
+          "smallIconUrl": "/img/icon/groups16.png",
+          "svgIconUrl": null
+        },
+        "myRole": "StandardMember",
+        "mySubscription": {
+          "id": "0FB46000000sLqWGAU",
+          "url": "/services/data/v39.0/chatter/group-memberships/0FB46000000sLqWGAU"
+        },
+        "name": "Chatter Mike Test Group",
+        "owner": {
+          "additionalLabel": null,
+          "communityNickname": "mmcculloch",
+          "companyName": "LEO",
+          "displayName": "Mike McCulloch",
+          "firstName": "Mike",
+          "id": "00546000001Kgt2AAC",
+          "isActive": true,
+          "isInThisCommunity": true,
+          "lastName": "McCulloch",
+          "motif": {
+            "color": "65CAE4",
+            "largeIconUrl": "/img/icon/profile64.png",
+            "mediumIconUrl": "/img/icon/profile32.png",
+            "smallIconUrl": "/img/icon/profile16.png",
+            "svgIconUrl": null
+          },
+          "mySubscription": null,
+          "name": "Mike McCulloch",
+          "photo": {
+            "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_profile_200_v2.png?fromEmail=1",
+            "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/F",
+            "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/M",
+            "photoVersionId": null,
+            "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/T",
+            "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1",
+            "url": "/services/data/v39.0/connect/user-profiles/00546000001Kgt2AAC/photo"
+          },
+          "reputation": null,
+          "stamps": [],
+          "title": null,
+          "type": "User",
+          "url": "/services/data/v39.0/chatter/users/00546000001Kgt2AAC",
+          "userType": "ChatterOnly"
+        },
+        "photo": {
+          "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_group_profile_200_v2.png?fromEmail=1",
+          "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/F",
+          "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/M",
+          "photoVersionId": null,
+          "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/T",
+          "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_group_profile_45_v2.png?fromEmail=1",
+          "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM/photo"
+        },
+        "type": "CollaborationGroup",
+        "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM",
+        "visibility": "PrivateAccess"
+      },
+      "photoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/T",
+      "relativeCreatedDate": "April 19, 2017 at 11:11 AM",
+      "type": "TextPost",
+      "url": "/services/data/v39.0/chatter/feed-elements/0D546000007aU41CAE",
+      "visibility": "AllUsers"
+    },
+    {
+      "actor": {
+        "additionalLabel": null,
+        "communityNickname": "speek",
+        "companyName": "LEO",
+        "displayName": "Stephen Peek",
+        "firstName": "Stephen",
+        "id": "00546000001KgbLAAS",
+        "isActive": true,
+        "isInThisCommunity": true,
+        "lastName": "Peek",
+        "motif": {
+          "color": "65CAE4",
+          "largeIconUrl": "/img/icon/profile64.png",
+          "mediumIconUrl": "/img/icon/profile32.png",
+          "smallIconUrl": "/img/icon/profile16.png",
+          "svgIconUrl": null
+        },
+        "mySubscription": null,
+        "name": "Stephen Peek",
+        "photo": {
+          "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/ncsphoto/Q2BGsLVTeqxnmAxRevD5013GTLYtVdmZLx_OjOGy-kcY8zwheCIbvzddhw8QfENDjn6tD8D0fDxyCg5TsLYoyA%3D%3D",
+          "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/F",
+          "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/M",
+          "photoVersionId": "72946000000tfdlAAA",
+          "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/T",
+          "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/ncsphoto/Q2BGsLVTeqxnmAxRevD5013GTLYtVdmZLx_OjOGy-kdwyrU_JMMbtuOhnp-gZU7oKSUa7OqJqbqaFKboZs9EMQ%3D%3D",
+          "url": "/services/data/v39.0/connect/user-profiles/00546000001KgbLAAS/photo"
+        },
+        "reputation": null,
+        "stamps": [],
+        "title": null,
+        "type": "User",
+        "url": "/services/data/v39.0/chatter/users/00546000001KgbLAAS",
+        "userType": "ChatterOnly"
+      },
+      "body": {
+        "isRichText": false,
+        "messageSegments": [
+          {
+            "text": "Posting from app via browser",
+            "type": "Text"
+          }
+        ],
+        "text": "Posting from app via browser"
+      },
+      "capabilities": {
+        "associatedActions": {
+          "platformActionGroups": []
+        },
+        "bookmarks": {
+          "isBookmarkedByCurrentUser": false
+        },
+        "chatterLikes": {
+          "isLikedByCurrentUser": false,
+          "likesMessage": null,
+          "myLike": null,
+          "page": {
+            "currentPageToken": 0,
+            "currentPageUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007a7ohCAA/capabilities/chatter-likes/items",
+            "items": [],
+            "nextPageToken": null,
+            "nextPageUrl": null,
+            "previousPageToken": null,
+            "previousPageUrl": null,
+            "total": 0
+          }
+        },
+        "comments": {
+          "page": {
+            "currentPageToken": null,
+            "currentPageUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007a7ohCAA/capabilities/comments/items",
+            "items": [],
+            "nextPageToken": null,
+            "nextPageUrl": null,
+            "total": 0
+          }
+        },
+        "edit": {
+          "isEditRestricted": true,
+          "isEditableByMeUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007a7ohCAA/capabilities/edit/is-editable-by-me",
+          "lastEditedBy": null,
+          "lastEditedDate": null,
+          "latestRevision": 1,
+          "relativeLastEditedDate": null
+        },
+        "interactions": {
+          "count": 0
+        },
+        "mute": {
+          "isMutedByMe": false
+        },
+        "status": {
+          "feedEntityStatus": "Published",
+          "isApprovableByMe": false
+        },
+        "topics": {
+          "canAssignTopics": true,
+          "items": []
+        }
+      },
+      "clientInfo": {
+        "applicationName": "StateFarmPaperless",
+        "applicationUrl": "https://www.paperless.events"
+      },
+      "createdDate": "2017-04-19T15:16:37.000Z",
+      "event": false,
+      "feedElementType": "FeedItem",
+      "header": {
+        "isRichText": null,
+        "messageSegments": [
+          {
+            "motif": {
+              "color": "65CAE4",
+              "largeIconUrl": "/img/icon/profile64.png",
+              "mediumIconUrl": "/img/icon/profile32.png",
+              "smallIconUrl": "/img/icon/profile16.png",
+              "svgIconUrl": null
+            },
+            "reference": {
+              "id": "00546000001KgbLAAS",
+              "url": "/services/data/v39.0/chatter/users/00546000001KgbLAAS"
+            },
+            "text": "Stephen Peek",
+            "type": "EntityLink"
+          }
+        ],
+        "text": "Stephen Peek"
+      },
+      "id": "0D546000007a7ohCAA",
+      "isDeleteRestricted": false,
+      "isSharable": false,
+      "modifiedDate": "2017-04-19T15:16:37.000Z",
+      "originalFeedItem": null,
+      "originalFeedItemActor": null,
+      "parent": {
+        "additionalLabel": "Private",
+        "announcement": null,
+        "bannerPhoto": {
+          "bannerPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/B",
+          "bannerPhotoVersionId": null,
+          "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM/banner-photo"
+        },
+        "canHaveChatterGuests": false,
+        "community": null,
+        "description": "This Chatter group is used as a test",
+        "emailToChatterAddress": "0F946000000aEEiCAM@post.46-15fpeeaa.na40.chatter.salesforce.com",
+        "id": "0F946000000aEEiCAM",
+        "isArchived": false,
+        "isAutoArchiveDisabled": false,
+        "isBroadcast": false,
+        "lastFeedElementPostDate": "2017-04-19T16:11:30.000Z",
+        "memberCount": 5,
+        "motif": {
+          "color": "83B6FF",
+          "largeIconUrl": "/img/icon/groups64.png",
+          "mediumIconUrl": "/img/icon/groups32.png",
+          "smallIconUrl": "/img/icon/groups16.png",
+          "svgIconUrl": null
+        },
+        "myRole": "StandardMember",
+        "mySubscription": {
+          "id": "0FB46000000sLqWGAU",
+          "url": "/services/data/v39.0/chatter/group-memberships/0FB46000000sLqWGAU"
+        },
+        "name": "Chatter Mike Test Group",
+        "owner": {
+          "additionalLabel": null,
+          "communityNickname": "mmcculloch",
+          "companyName": "LEO",
+          "displayName": "Mike McCulloch",
+          "firstName": "Mike",
+          "id": "00546000001Kgt2AAC",
+          "isActive": true,
+          "isInThisCommunity": true,
+          "lastName": "McCulloch",
+          "motif": {
+            "color": "65CAE4",
+            "largeIconUrl": "/img/icon/profile64.png",
+            "mediumIconUrl": "/img/icon/profile32.png",
+            "smallIconUrl": "/img/icon/profile16.png",
+            "svgIconUrl": null
+          },
+          "mySubscription": null,
+          "name": "Mike McCulloch",
+          "photo": {
+            "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_profile_200_v2.png?fromEmail=1",
+            "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/F",
+            "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/M",
+            "photoVersionId": null,
+            "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/T",
+            "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1",
+            "url": "/services/data/v39.0/connect/user-profiles/00546000001Kgt2AAC/photo"
+          },
+          "reputation": null,
+          "stamps": [],
+          "title": null,
+          "type": "User",
+          "url": "/services/data/v39.0/chatter/users/00546000001Kgt2AAC",
+          "userType": "ChatterOnly"
+        },
+        "photo": {
+          "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_group_profile_200_v2.png?fromEmail=1",
+          "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/F",
+          "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/M",
+          "photoVersionId": null,
+          "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/T",
+          "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_group_profile_45_v2.png?fromEmail=1",
+          "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM/photo"
+        },
+        "type": "CollaborationGroup",
+        "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM",
+        "visibility": "PrivateAccess"
+      },
+      "photoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/T",
+      "relativeCreatedDate": "April 19, 2017 at 10:16 AM",
+      "type": "TextPost",
+      "url": "/services/data/v39.0/chatter/feed-elements/0D546000007a7ohCAA",
+      "visibility": "AllUsers"
+    },
+    {
+      "actor": {
+        "additionalLabel": null,
+        "communityNickname": "speek",
+        "companyName": "LEO",
+        "displayName": "Stephen Peek",
+        "firstName": "Stephen",
+        "id": "00546000001KgbLAAS",
+        "isActive": true,
+        "isInThisCommunity": true,
+        "lastName": "Peek",
+        "motif": {
+          "color": "65CAE4",
+          "largeIconUrl": "/img/icon/profile64.png",
+          "mediumIconUrl": "/img/icon/profile32.png",
+          "smallIconUrl": "/img/icon/profile16.png",
+          "svgIconUrl": null
+        },
+        "mySubscription": null,
+        "name": "Stephen Peek",
+        "photo": {
+          "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/ncsphoto/Q2BGsLVTeqxnmAxRevD5013GTLYtVdmZLx_OjOGy-kcY8zwheCIbvzddhw8QfENDjn6tD8D0fDxyCg5TsLYoyA%3D%3D",
+          "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/F",
+          "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/M",
+          "photoVersionId": "72946000000tfdlAAA",
+          "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/T",
+          "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/ncsphoto/Q2BGsLVTeqxnmAxRevD5013GTLYtVdmZLx_OjOGy-kdwyrU_JMMbtuOhnp-gZU7oKSUa7OqJqbqaFKboZs9EMQ%3D%3D",
+          "url": "/services/data/v39.0/connect/user-profiles/00546000001KgbLAAS/photo"
+        },
+        "reputation": null,
+        "stamps": [],
+        "title": null,
+        "type": "User",
+        "url": "/services/data/v39.0/chatter/users/00546000001KgbLAAS",
+        "userType": "ChatterOnly"
+      },
+      "body": {
+        "isRichText": false,
+        "messageSegments": [
+          {
+            "text": "asdfasfasfd",
+            "type": "Text"
+          }
+        ],
+        "text": "asdfasfasfd"
+      },
+      "capabilities": {
+        "associatedActions": {
+          "platformActionGroups": []
+        },
+        "bookmarks": {
+          "isBookmarkedByCurrentUser": false
+        },
+        "chatterLikes": {
+          "isLikedByCurrentUser": false,
+          "likesMessage": null,
+          "myLike": null,
+          "page": {
+            "currentPageToken": 0,
+            "currentPageUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007a7oDCAQ/capabilities/chatter-likes/items",
+            "items": [],
+            "nextPageToken": null,
+            "nextPageUrl": null,
+            "previousPageToken": null,
+            "previousPageUrl": null,
+            "total": 0
+          }
+        },
+        "comments": {
+          "page": {
+            "currentPageToken": null,
+            "currentPageUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007a7oDCAQ/capabilities/comments/items",
+            "items": [],
+            "nextPageToken": null,
+            "nextPageUrl": null,
+            "total": 0
+          }
+        },
+        "edit": {
+          "isEditRestricted": true,
+          "isEditableByMeUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007a7oDCAQ/capabilities/edit/is-editable-by-me",
+          "lastEditedBy": null,
+          "lastEditedDate": null,
+          "latestRevision": 1,
+          "relativeLastEditedDate": null
+        },
+        "interactions": {
+          "count": 0
+        },
+        "mute": {
+          "isMutedByMe": false
+        },
+        "status": {
+          "feedEntityStatus": "Published",
+          "isApprovableByMe": false
+        },
+        "topics": {
+          "canAssignTopics": true,
+          "items": []
+        }
+      },
+      "clientInfo": {
+        "applicationName": "StateFarmPaperless",
+        "applicationUrl": "https://www.paperless.events"
+      },
+      "createdDate": "2017-04-19T15:15:50.000Z",
+      "event": false,
+      "feedElementType": "FeedItem",
+      "header": {
+        "isRichText": null,
+        "messageSegments": [
+          {
+            "motif": {
+              "color": "65CAE4",
+              "largeIconUrl": "/img/icon/profile64.png",
+              "mediumIconUrl": "/img/icon/profile32.png",
+              "smallIconUrl": "/img/icon/profile16.png",
+              "svgIconUrl": null
+            },
+            "reference": {
+              "id": "00546000001KgbLAAS",
+              "url": "/services/data/v39.0/chatter/users/00546000001KgbLAAS"
+            },
+            "text": "Stephen Peek",
+            "type": "EntityLink"
+          }
+        ],
+        "text": "Stephen Peek"
+      },
+      "id": "0D546000007a7oDCAQ",
+      "isDeleteRestricted": false,
+      "isSharable": false,
+      "modifiedDate": "2017-04-19T15:15:50.000Z",
+      "originalFeedItem": null,
+      "originalFeedItemActor": null,
+      "parent": {
+        "additionalLabel": "Private",
+        "announcement": null,
+        "bannerPhoto": {
+          "bannerPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/B",
+          "bannerPhotoVersionId": null,
+          "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM/banner-photo"
+        },
+        "canHaveChatterGuests": false,
+        "community": null,
+        "description": "This Chatter group is used as a test",
+        "emailToChatterAddress": "0F946000000aEEiCAM@post.46-15fpeeaa.na40.chatter.salesforce.com",
+        "id": "0F946000000aEEiCAM",
+        "isArchived": false,
+        "isAutoArchiveDisabled": false,
+        "isBroadcast": false,
+        "lastFeedElementPostDate": "2017-04-19T16:11:30.000Z",
+        "memberCount": 5,
+        "motif": {
+          "color": "83B6FF",
+          "largeIconUrl": "/img/icon/groups64.png",
+          "mediumIconUrl": "/img/icon/groups32.png",
+          "smallIconUrl": "/img/icon/groups16.png",
+          "svgIconUrl": null
+        },
+        "myRole": "StandardMember",
+        "mySubscription": {
+          "id": "0FB46000000sLqWGAU",
+          "url": "/services/data/v39.0/chatter/group-memberships/0FB46000000sLqWGAU"
+        },
+        "name": "Chatter Mike Test Group",
+        "owner": {
+          "additionalLabel": null,
+          "communityNickname": "mmcculloch",
+          "companyName": "LEO",
+          "displayName": "Mike McCulloch",
+          "firstName": "Mike",
+          "id": "00546000001Kgt2AAC",
+          "isActive": true,
+          "isInThisCommunity": true,
+          "lastName": "McCulloch",
+          "motif": {
+            "color": "65CAE4",
+            "largeIconUrl": "/img/icon/profile64.png",
+            "mediumIconUrl": "/img/icon/profile32.png",
+            "smallIconUrl": "/img/icon/profile16.png",
+            "svgIconUrl": null
+          },
+          "mySubscription": null,
+          "name": "Mike McCulloch",
+          "photo": {
+            "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_profile_200_v2.png?fromEmail=1",
+            "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/F",
+            "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/M",
+            "photoVersionId": null,
+            "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/T",
+            "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1",
+            "url": "/services/data/v39.0/connect/user-profiles/00546000001Kgt2AAC/photo"
+          },
+          "reputation": null,
+          "stamps": [],
+          "title": null,
+          "type": "User",
+          "url": "/services/data/v39.0/chatter/users/00546000001Kgt2AAC",
+          "userType": "ChatterOnly"
+        },
+        "photo": {
+          "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_group_profile_200_v2.png?fromEmail=1",
+          "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/F",
+          "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/M",
+          "photoVersionId": null,
+          "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/T",
+          "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_group_profile_45_v2.png?fromEmail=1",
+          "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM/photo"
+        },
+        "type": "CollaborationGroup",
+        "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM",
+        "visibility": "PrivateAccess"
+      },
+      "photoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/T",
+      "relativeCreatedDate": "April 19, 2017 at 10:15 AM",
+      "type": "TextPost",
+      "url": "/services/data/v39.0/chatter/feed-elements/0D546000007a7oDCAQ",
+      "visibility": "AllUsers"
+    },
+    {
+      "actor": {
+        "additionalLabel": null,
+        "communityNickname": "speek",
+        "companyName": "LEO",
+        "displayName": "Stephen Peek",
+        "firstName": "Stephen",
+        "id": "00546000001KgbLAAS",
+        "isActive": true,
+        "isInThisCommunity": true,
+        "lastName": "Peek",
+        "motif": {
+          "color": "65CAE4",
+          "largeIconUrl": "/img/icon/profile64.png",
+          "mediumIconUrl": "/img/icon/profile32.png",
+          "smallIconUrl": "/img/icon/profile16.png",
+          "svgIconUrl": null
+        },
+        "mySubscription": null,
+        "name": "Stephen Peek",
+        "photo": {
+          "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/ncsphoto/Q2BGsLVTeqxnmAxRevD5013GTLYtVdmZLx_OjOGy-kcY8zwheCIbvzddhw8QfENDjn6tD8D0fDxyCg5TsLYoyA%3D%3D",
+          "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/F",
+          "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/M",
+          "photoVersionId": "72946000000tfdlAAA",
+          "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/T",
+          "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/ncsphoto/Q2BGsLVTeqxnmAxRevD5013GTLYtVdmZLx_OjOGy-kdwyrU_JMMbtuOhnp-gZU7oKSUa7OqJqbqaFKboZs9EMQ%3D%3D",
+          "url": "/services/data/v39.0/connect/user-profiles/00546000001KgbLAAS/photo"
+        },
+        "reputation": null,
+        "stamps": [],
+        "title": null,
+        "type": "User",
+        "url": "/services/data/v39.0/chatter/users/00546000001KgbLAAS",
+        "userType": "ChatterOnly"
+      },
+      "body": {
+        "isRichText": true,
+        "messageSegments": [
+          {
+            "htmlTag": "p",
+            "markupType": "Paragraph",
+            "text": "",
+            "type": "MarkupBegin"
+          },
+          {
+            "text": "Test",
+            "type": "Text"
+          },
+          {
+            "htmlTag": "p",
+            "markupType": "Paragraph",
+            "text": "\n",
+            "type": "MarkupEnd"
+          }
+        ],
+        "text": "Test\n"
+      },
+      "capabilities": {
+        "associatedActions": {
+          "platformActionGroups": []
+        },
+        "bookmarks": {
+          "isBookmarkedByCurrentUser": false
+        },
+        "chatterLikes": {
+          "isLikedByCurrentUser": false,
+          "likesMessage": null,
+          "myLike": null,
+          "page": {
+            "currentPageToken": 0,
+            "currentPageUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007YXaKCAW/capabilities/chatter-likes/items",
+            "items": [],
+            "nextPageToken": null,
+            "nextPageUrl": null,
+            "previousPageToken": null,
+            "previousPageUrl": null,
+            "total": 0
+          }
+        },
+        "comments": {
+          "page": {
+            "currentPageToken": null,
+            "currentPageUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007YXaKCAW/capabilities/comments/items",
+            "items": [],
+            "nextPageToken": null,
+            "nextPageUrl": null,
+            "total": 0
+          }
+        },
+        "edit": {
+          "isEditRestricted": true,
+          "isEditableByMeUrl": "/services/data/v39.0/chatter/feed-elements/0D546000007YXaKCAW/capabilities/edit/is-editable-by-me",
+          "lastEditedBy": null,
+          "lastEditedDate": null,
+          "latestRevision": 1,
+          "relativeLastEditedDate": null
+        },
+        "interactions": {
+          "count": 0
+        },
+        "mute": {
+          "isMutedByMe": false
+        },
+        "status": {
+          "feedEntityStatus": "Published",
+          "isApprovableByMe": false
+        },
+        "topics": {
+          "canAssignTopics": true,
+          "items": []
+        }
+      },
+      "clientInfo": null,
+      "createdDate": "2017-04-18T21:03:26.000Z",
+      "event": false,
+      "feedElementType": "FeedItem",
+      "header": {
+        "isRichText": null,
+        "messageSegments": [
+          {
+            "motif": {
+              "color": "65CAE4",
+              "largeIconUrl": "/img/icon/profile64.png",
+              "mediumIconUrl": "/img/icon/profile32.png",
+              "smallIconUrl": "/img/icon/profile16.png",
+              "svgIconUrl": null
+            },
+            "reference": {
+              "id": "00546000001KgbLAAS",
+              "url": "/services/data/v39.0/chatter/users/00546000001KgbLAAS"
+            },
+            "text": "Stephen Peek",
+            "type": "EntityLink"
+          }
+        ],
+        "text": "Stephen Peek"
+      },
+      "id": "0D546000007YXaKCAW",
+      "isDeleteRestricted": false,
+      "isSharable": false,
+      "modifiedDate": "2017-04-18T21:03:26.000Z",
+      "originalFeedItem": null,
+      "originalFeedItemActor": null,
+      "parent": {
+        "additionalLabel": "Private",
+        "announcement": null,
+        "bannerPhoto": {
+          "bannerPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/B",
+          "bannerPhotoVersionId": null,
+          "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM/banner-photo"
+        },
+        "canHaveChatterGuests": false,
+        "community": null,
+        "description": "This Chatter group is used as a test",
+        "emailToChatterAddress": "0F946000000aEEiCAM@post.46-15fpeeaa.na40.chatter.salesforce.com",
+        "id": "0F946000000aEEiCAM",
+        "isArchived": false,
+        "isAutoArchiveDisabled": false,
+        "isBroadcast": false,
+        "lastFeedElementPostDate": "2017-04-19T16:11:30.000Z",
+        "memberCount": 5,
+        "motif": {
+          "color": "83B6FF",
+          "largeIconUrl": "/img/icon/groups64.png",
+          "mediumIconUrl": "/img/icon/groups32.png",
+          "smallIconUrl": "/img/icon/groups16.png",
+          "svgIconUrl": null
+        },
+        "myRole": "StandardMember",
+        "mySubscription": {
+          "id": "0FB46000000sLqWGAU",
+          "url": "/services/data/v39.0/chatter/group-memberships/0FB46000000sLqWGAU"
+        },
+        "name": "Chatter Mike Test Group",
+        "owner": {
+          "additionalLabel": null,
+          "communityNickname": "mmcculloch",
+          "companyName": "LEO",
+          "displayName": "Mike McCulloch",
+          "firstName": "Mike",
+          "id": "00546000001Kgt2AAC",
+          "isActive": true,
+          "isInThisCommunity": true,
+          "lastName": "McCulloch",
+          "motif": {
+            "color": "65CAE4",
+            "largeIconUrl": "/img/icon/profile64.png",
+            "mediumIconUrl": "/img/icon/profile32.png",
+            "smallIconUrl": "/img/icon/profile16.png",
+            "svgIconUrl": null
+          },
+          "mySubscription": null,
+          "name": "Mike McCulloch",
+          "photo": {
+            "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_profile_200_v2.png?fromEmail=1",
+            "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/F",
+            "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/M",
+            "photoVersionId": null,
+            "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/005/T",
+            "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1",
+            "url": "/services/data/v39.0/connect/user-profiles/00546000001Kgt2AAC/photo"
+          },
+          "reputation": null,
+          "stamps": [],
+          "title": null,
+          "type": "User",
+          "url": "/services/data/v39.0/chatter/users/00546000001Kgt2AAC",
+          "userType": "ChatterOnly"
+        },
+        "photo": {
+          "fullEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_group_profile_200_v2.png?fromEmail=1",
+          "largePhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/F",
+          "mediumPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/M",
+          "photoVersionId": null,
+          "smallPhotoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/0F9/T",
+          "standardEmailPhotoUrl": "https://sfconvention.my.salesforce.com/img/userprofile/default_group_profile_45_v2.png?fromEmail=1",
+          "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM/photo"
+        },
+        "type": "CollaborationGroup",
+        "url": "/services/data/v39.0/chatter/groups/0F946000000aEEiCAM",
+        "visibility": "PrivateAccess"
+      },
+      "photoUrl": "https://sfconvention--c.na40.content.force.com/profilephoto/72946000000tfdl/T",
+      "relativeCreatedDate": "April 18, 2017 at 4:03 PM",
+      "type": "TextPost",
+      "url": "/services/data/v39.0/chatter/feed-elements/0D546000007YXaKCAW",
+      "visibility": "AllUsers"
+    }
+  ],
+  "isModifiedToken": null,
+  "isModifiedUrl": null,
+  "nextPageToken": null,
+  "nextPageUrl": null,
+  "updatesToken": "2:1492618290000",
+  "updatesUrl": "/services/data/v39.0/chatter/feeds/record/0F946000000aEEiCAM/feed-elements?updatedSince=2%3A1492618290000"
+}
